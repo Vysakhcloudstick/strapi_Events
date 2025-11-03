@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "order_reference_cards",
+  "info": {
+    "singularName": "order-reference-card",
+    "pluralName": "order-reference-cards",
+    "displayName": "Order Reference Card"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "OrderReference": {
+      "type": "string"
+    }
+  }
+}

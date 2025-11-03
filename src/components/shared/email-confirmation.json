@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_email_confirmations",
+  "info": {
+    "displayName": "Email Confirmation"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

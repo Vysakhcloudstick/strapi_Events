@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "product_catgeories",
+  "info": {
+    "singularName": "product-catgeory",
+    "pluralName": "product-catgeories",
+    "displayName": "productCatgeory"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "productCategory": {
+      "type": "string"
+    }
+  }
+}

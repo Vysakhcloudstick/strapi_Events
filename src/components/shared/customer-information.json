@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_shared_customer_informations",
+  "info": {
+    "displayName": "Customer Information"
+  },
+  "options": {},
+  "attributes": {
+    "firstName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "phoneNumber": {
+      "type": "biginteger"
+    },
+    "emailAddress": {
+      "type": "email"
+    }
+  },
+  "config": {}
+}

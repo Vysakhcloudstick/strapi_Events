@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_shared_specifications",
+  "info": {
+    "displayName": "specifications"
+  },
+  "options": {},
+  "attributes": {
+    "Diameter": {
+      "type": "string"
+    },
+    "Height": {
+      "type": "string"
+    },
+    "Weight": {
+      "type": "string"
+    },
+    "Setup": {
+      "type": "string"
+    },
+    "Material": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

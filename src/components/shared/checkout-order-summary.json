@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_shared_checkout_order_summaries",
+  "info": {
+    "displayName": "Checkout Order Summary"
+  },
+  "options": {},
+  "attributes": {
+    "category": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "quantity": {
+      "type": "integer"
+    },
+    "rentalDays": {
+      "type": "integer"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "Delivery": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

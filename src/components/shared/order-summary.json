@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_shared_order_summaries",
+  "info": {
+    "displayName": "orderSummary"
+  },
+  "options": {},
+  "attributes": {
+    "Delivery": {
+      "type": "string"
+    },
+    "Insurance": {
+      "type": "string"
+    },
+    "Subtotal": {
+      "type": "decimal"
+    },
+    "Total": {
+      "type": "decimal"
+    }
+  },
+  "config": {}
+}

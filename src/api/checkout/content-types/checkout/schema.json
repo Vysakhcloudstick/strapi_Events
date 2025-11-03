@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "checkouts",
+  "info": {
+    "singularName": "checkout",
+    "pluralName": "checkouts",
+    "displayName": "checkout"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "customerInformation": {
+      "type": "component",
+      "component": "shared.customer-i-nformation",
+      "repeatable": false
+    },
+    "eventInformation": {
+      "type": "component",
+      "component": "shared.event-information",
+      "repeatable": false
+    },
+    "DeliveryOptions": {
+      "type": "component",
+      "component": "shared.delivery-options",
+      "repeatable": false,
+      "required": false
+    },
+    "AdditionalInformation": {
+      "type": "component",
+      "component": "shared.additional-information",
+      "repeatable": false
+    },
+    "OrderSummary": {
+      "type": "component",
+      "component": "shared.checkout-order-summary",
+      "repeatable": true
+    },
+    "Subtotal": {
+      "type": "decimal"
+    },
+    "Total": {
+      "type": "decimal"
+    },
+    "OrderReference": {
+      "type": "string"
+    }
+  }
+}

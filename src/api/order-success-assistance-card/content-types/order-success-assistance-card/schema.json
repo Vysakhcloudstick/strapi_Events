@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "order_success_assistance_cards",
+  "info": {
+    "singularName": "order-success-assistance-card",
+    "pluralName": "order-success-assistance-cards",
+    "displayName": "order Success Assistance card"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "sendMessage": {
+      "type": "string"
+    },
+    "call": {
+      "type": "biginteger"
+    }
+  }
+}

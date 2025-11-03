@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_shared_checkout_details",
+  "info": {
+    "displayName": "checkout Details"
+  },
+  "options": {},
+  "attributes": {
+    "customerInformation": {
+      "type": "component",
+      "component": "shared.customer-information",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "contactforms",
+  "info": {
+    "singularName": "contactform",
+    "pluralName": "contactforms",
+    "displayName": "contactform"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "FullName": {
+      "type": "string"
+    },
+    "EmailAddress": {
+      "type": "email"
+    },
+    "phoneNumber": {
+      "type": "biginteger"
+    },
+    "eventType": {
+      "type": "text"
+    },
+    "preferredDate": {
+      "type": "date"
+    },
+    "preferredTime": {
+      "type": "time"
+    },
+    "tellUsAboutYourVision": {
+      "type": "text"
+    },
+    "companyNumber": {
+      "type": "biginteger"
+    },
+    "companyEmail": {
+      "type": "email"
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "book_nows",
+  "info": {
+    "singularName": "book-now",
+    "pluralName": "book-nows",
+    "displayName": "book Now"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "rating": {
+      "type": "decimal"
+    },
+    "review": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "features": {
+      "type": "richtext"
+    },
+    "availability": {
+      "type": "string"
+    },
+    "rentalDays": {
+      "type": "integer"
+    },
+    "quantity": {
+      "type": "integer"
+    }
+  }
+}

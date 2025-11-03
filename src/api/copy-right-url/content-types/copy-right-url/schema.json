@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "copy_right_urls",
+  "info": {
+    "singularName": "copy-right-url",
+    "pluralName": "copy-right-urls",
+    "displayName": "copyRightUrl"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "copyRightUrl": {
+      "type": "text"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "business_hours",
+  "info": {
+    "singularName": "business-hour",
+    "pluralName": "business-hours",
+    "displayName": "business Hour"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "businessHour": {
+      "type": "richtext"
+    }
+  }
+}

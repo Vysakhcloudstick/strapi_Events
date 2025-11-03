@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_event_informations",
+  "info": {
+    "displayName": "event Information"
+  },
+  "options": {},
+  "attributes": {
+    "eventDate": {
+      "type": "date"
+    },
+    "eventType": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

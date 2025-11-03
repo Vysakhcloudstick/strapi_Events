@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_shared_additional_informations",
+  "info": {
+    "displayName": "Additional Information"
+  },
+  "options": {},
+  "attributes": {
+    "SpecialRequests": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

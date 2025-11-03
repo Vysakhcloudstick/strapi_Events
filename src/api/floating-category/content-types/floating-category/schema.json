@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "floating_categories",
+  "info": {
+    "singularName": "floating-category",
+    "pluralName": "floating-categories",
+    "displayName": "floatingCategory"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "floatingCategory": {
+      "type": "string"
+    }
+  }
+}

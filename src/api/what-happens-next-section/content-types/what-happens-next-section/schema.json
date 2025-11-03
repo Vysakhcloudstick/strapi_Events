@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "what_happens_next_sections",
+  "info": {
+    "singularName": "what-happens-next-section",
+    "pluralName": "what-happens-next-sections",
+    "displayName": "What Happens Next Section"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "EmailConfirmation": {
+      "type": "component",
+      "component": "shared.email-confirmation",
+      "repeatable": false
+    },
+    "PersonalConsultation": {
+      "type": "component",
+      "component": "shared.personal-consultation",
+      "repeatable": false
+    },
+    "DeliverySetup": {
+      "type": "component",
+      "component": "shared.delivery-and-setup",
+      "repeatable": false
+    }
+  }
+}

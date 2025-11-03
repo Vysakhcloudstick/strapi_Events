@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "event_videos",
+  "info": {
+    "singularName": "event-video",
+    "pluralName": "event-videos",
+    "displayName": "eventVideo"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "views": {
+      "type": "decimal"
+    },
+    "duration": {
+      "type": "decimal"
+    },
+    "category": {
+      "type": "string"
+    },
+    "video": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "event": {
+      "type": "string"
+    }
+  }
+}

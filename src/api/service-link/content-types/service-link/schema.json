@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "service_links",
+  "info": {
+    "singularName": "service-link",
+    "pluralName": "service-links",
+    "displayName": "serviceLink"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ourServices": {
+      "type": "string"
+    }
+  }
+}

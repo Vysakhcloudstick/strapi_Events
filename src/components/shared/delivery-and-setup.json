@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_delivery_and_setups",
+  "info": {
+    "displayName": "Delivery & Setup"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

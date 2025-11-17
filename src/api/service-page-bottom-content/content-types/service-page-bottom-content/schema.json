@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "service_page_bottom_contents",
+  "info": {
+    "singularName": "service-page-bottom-content",
+    "pluralName": "service-page-bottom-contents",
+    "displayName": "ServicePage bottom content"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "text"
+    }
+  }
+}

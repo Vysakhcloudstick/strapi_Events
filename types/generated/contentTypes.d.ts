@@ -467,6 +467,34 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiAboutUsAboutUs extends Struct.CollectionTypeSchema {
+  collectionName: 'about_uses';
+  info: {
+    displayName: 'aboutUs';
+    pluralName: 'about-uses';
+    singularName: 'about-us';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    aboutUsDescription: Schema.Attribute.RichText;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::about-us.about-us'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiAboutAbout extends Struct.SingleTypeSchema {
   collectionName: 'abouts';
   info: {
@@ -629,6 +657,36 @@ export interface ApiBookNowBookNow extends Struct.CollectionTypeSchema {
     rating: Schema.Attribute.Decimal;
     rentalDays: Schema.Attribute.Integer;
     review: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiBottomBannerBottomBanner
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'bottom_banners';
+  info: {
+    displayName: 'bottomBanner';
+    pluralName: 'bottom-banners';
+    singularName: 'bottom-banner';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::bottom-banner.bottom-banner'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -1002,6 +1060,36 @@ export interface ApiEventVideoEventVideo extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiFeaturedEventFeaturedEvent
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'featured_events';
+  info: {
+    displayName: 'featuredEvent';
+    pluralName: 'featured-events';
+    singularName: 'featured-event';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::featured-event.featured-event'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiFloatingCategoryFloatingCategory
   extends Struct.CollectionTypeSchema {
   collectionName: 'floating_categories';
@@ -1258,6 +1346,38 @@ export interface ApiProductDetailProductDetail
   };
 }
 
+export interface ApiServiceHeroVedioServiceHeroVedio
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'service_hero_vedios';
+  info: {
+    displayName: 'serviceHeroVedio';
+    pluralName: 'service-hero-vedios';
+    singularName: 'service-hero-vedio';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    heroVedioServicePage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::service-hero-vedio.service-hero-vedio'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    thumbnail: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiServiceLinkServiceLink extends Struct.CollectionTypeSchema {
   collectionName: 'service_links';
   info: {
@@ -1280,6 +1400,222 @@ export interface ApiServiceLinkServiceLink extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     ourServices: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiServiceLowerContentBlockCardServiceLowerContentBlockCard
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'service_lower_content_block_cards';
+  info: {
+    displayName: 'Service Lower Content Block card';
+    pluralName: 'service-lower-content-block-cards';
+    singularName: 'service-lower-content-block-card';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::service-lower-content-block-card.service-lower-content-block-card'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    subtitle: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiServiceLowerContentBlockServiceLowerContentBlock
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'service_lower_content_blocks';
+  info: {
+    displayName: 'Service Lower Content Block';
+    pluralName: 'service-lower-content-blocks';
+    singularName: 'service-lower-content-block';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::service-lower-content-block.service-lower-content-block'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    subtitle: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiServicePageAppointmentSectionServicePageAppointmentSection
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'service_page_appointment_sections';
+  info: {
+    displayName: 'servicePage appointment section';
+    pluralName: 'service-page-appointment-sections';
+    singularName: 'service-page-appointment-section';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    category: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.RichText;
+    images: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::service-page-appointment-section.service-page-appointment-section'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiServicePageBottomCardServicePageBottomCard
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'service_page_bottom_cards';
+  info: {
+    displayName: 'servicePage bottom card';
+    pluralName: 'service-page-bottom-cards';
+    singularName: 'service-page-bottom-card';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::service-page-bottom-card.service-page-bottom-card'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiServicePageBottomContentServicePageBottomContent
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'service_page_bottom_contents';
+  info: {
+    displayName: 'ServicePage bottom content';
+    pluralName: 'service-page-bottom-contents';
+    singularName: 'service-page-bottom-content';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::service-page-bottom-content.service-page-bottom-content'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    subtitle: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiServicePageVideoServicePageVideo
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'service_page_videos';
+  info: {
+    displayName: 'Service page video';
+    pluralName: 'service-page-videos';
+    singularName: 'service-page-video';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::service-page-video.service-page-video'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    thumbnail: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    video: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
+export interface ApiServicesUpperContentBlockServicesUpperContentBlock
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'services_upper_content_blocks';
+  info: {
+    displayName: 'Services Upper Content Block';
+    pluralName: 'services-upper-content-blocks';
+    singularName: 'services-upper-content-block';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::services-upper-content-block.services-upper-content-block'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    subtitle: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1837,11 +2173,13 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::about-us.about-us': ApiAboutUsAboutUs;
       'api::about.about': ApiAboutAbout;
       'api::address.address': ApiAddressAddress;
       'api::article.article': ApiArticleArticle;
       'api::author.author': ApiAuthorAuthor;
       'api::book-now.book-now': ApiBookNowBookNow;
+      'api::bottom-banner.bottom-banner': ApiBottomBannerBottomBanner;
       'api::business-hour.business-hour': ApiBusinessHourBusinessHour;
       'api::cart-data.cart-data': ApiCartDataCartData;
       'api::category-tab.category-tab': ApiCategoryTabCategoryTab;
@@ -1853,6 +2191,7 @@ declare module '@strapi/strapi' {
       'api::copy-right-url.copy-right-url': ApiCopyRightUrlCopyRightUrl;
       'api::event-picture.event-picture': ApiEventPictureEventPicture;
       'api::event-video.event-video': ApiEventVideoEventVideo;
+      'api::featured-event.featured-event': ApiFeaturedEventFeaturedEvent;
       'api::floating-category.floating-category': ApiFloatingCategoryFloatingCategory;
       'api::footer-content.footer-content': ApiFooterContentFooterContent;
       'api::global.global': ApiGlobalGlobal;
@@ -1861,7 +2200,15 @@ declare module '@strapi/strapi' {
       'api::order-success-assistance-card.order-success-assistance-card': ApiOrderSuccessAssistanceCardOrderSuccessAssistanceCard;
       'api::product-catgeory.product-catgeory': ApiProductCatgeoryProductCatgeory;
       'api::product-detail.product-detail': ApiProductDetailProductDetail;
+      'api::service-hero-vedio.service-hero-vedio': ApiServiceHeroVedioServiceHeroVedio;
       'api::service-link.service-link': ApiServiceLinkServiceLink;
+      'api::service-lower-content-block-card.service-lower-content-block-card': ApiServiceLowerContentBlockCardServiceLowerContentBlockCard;
+      'api::service-lower-content-block.service-lower-content-block': ApiServiceLowerContentBlockServiceLowerContentBlock;
+      'api::service-page-appointment-section.service-page-appointment-section': ApiServicePageAppointmentSectionServicePageAppointmentSection;
+      'api::service-page-bottom-card.service-page-bottom-card': ApiServicePageBottomCardServicePageBottomCard;
+      'api::service-page-bottom-content.service-page-bottom-content': ApiServicePageBottomContentServicePageBottomContent;
+      'api::service-page-video.service-page-video': ApiServicePageVideoServicePageVideo;
+      'api::services-upper-content-block.services-upper-content-block': ApiServicesUpperContentBlockServicesUpperContentBlock;
       'api::what-happens-next-section.what-happens-next-section': ApiWhatHappensNextSectionWhatHappensNextSection;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;

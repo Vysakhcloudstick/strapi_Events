@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "service_hero_vedios",
+  "info": {
+    "singularName": "service-hero-vedio",
+    "pluralName": "service-hero-vedios",
+    "displayName": "serviceHeroVedio"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heroVedioServicePage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "service_lower_content_block_cards",
+  "info": {
+    "singularName": "service-lower-content-block-card",
+    "pluralName": "service-lower-content-block-cards",
+    "displayName": "Service Lower Content Block card"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "text"
+    }
+  }
+}

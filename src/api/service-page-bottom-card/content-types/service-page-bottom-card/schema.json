@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "service_page_bottom_cards",
+  "info": {
+    "singularName": "service-page-bottom-card",
+    "pluralName": "service-page-bottom-cards",
+    "displayName": "servicePage bottom card"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

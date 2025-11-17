@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "service_lower_content_blocks",
+  "info": {
+    "singularName": "service-lower-content-block",
+    "pluralName": "service-lower-content-blocks",
+    "displayName": "Service Lower Content Block"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "text"
+    }
+  }
+}

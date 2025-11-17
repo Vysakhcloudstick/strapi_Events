@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "service_page_videos",
+  "info": {
+    "singularName": "service-page-video",
+    "pluralName": "service-page-videos",
+    "displayName": "Service page video"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "video": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

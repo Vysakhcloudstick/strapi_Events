@@ -18,13 +18,17 @@
   "dependencies": {
     "@strapi/plugin-cloud": "5.28.0",
     "@strapi/plugin-users-permissions": "5.28.0",
+    "@strapi/provider-email-sendgrid": "^5.31.3",
     "@strapi/strapi": "5.28.0",
     "better-sqlite3": "11.3.0",
     "fs-extra": "^10.0.0",
+    "handlebars": "^4.7.8",
     "mime-types": "^2.1.27",
+    "nodemailer": "^7.0.11",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.0.0",
+    "strapi-provider-email-smtp": "^1.0.3",
     "styled-components": "^6.0.0"
   },
   "devDependencies": {

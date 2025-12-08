@@ -818,6 +818,39 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiCheckoutEmailCheckoutEmail
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'checkout_emails';
+  info: {
+    displayName: 'Checkout Email';
+    pluralName: 'checkout-emails';
+    singularName: 'checkout-email';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    email: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::checkout-email.checkout-email'
+    > &
+      Schema.Attribute.Private;
+    message: Schema.Attribute.Text;
+    name: Schema.Attribute.String;
+    preferredDate: Schema.Attribute.Date;
+    preferredTime: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiCheckoutCheckout extends Struct.CollectionTypeSchema {
   collectionName: 'checkouts';
   info: {
@@ -986,6 +1019,30 @@ export interface ApiCopyRightUrlCopyRightUrl
       'oneToMany',
       'api::copy-right-url.copy-right-url'
     > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiEmailEmail extends Struct.CollectionTypeSchema {
+  collectionName: 'emails';
+  info: {
+    displayName: 'Email';
+    pluralName: 'emails';
+    singularName: 'email';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::email.email'> &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
@@ -1181,6 +1238,68 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
     publishedAt: Schema.Attribute.DateTime;
     siteDescription: Schema.Attribute.Text & Schema.Attribute.Required;
     siteName: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiHireVideoHireVideo extends Struct.CollectionTypeSchema {
+  collectionName: 'hire_videos';
+  info: {
+    displayName: 'hireHeroSection';
+    pluralName: 'hire-videos';
+    singularName: 'hire-video';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    heroImg: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::hire-video.hire-video'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    subtitle: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiLandingHeroLandingHero extends Struct.CollectionTypeSchema {
+  collectionName: 'landing_heroes';
+  info: {
+    displayName: 'landingHero';
+    pluralName: 'landing-heroes';
+    singularName: 'landing-hero';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    button1: Schema.Attribute.String;
+    button2: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    herovideo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::landing-hero.landing-hero'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -2184,17 +2303,21 @@ declare module '@strapi/strapi' {
       'api::cart-data.cart-data': ApiCartDataCartData;
       'api::category-tab.category-tab': ApiCategoryTabCategoryTab;
       'api::category.category': ApiCategoryCategory;
+      'api::checkout-email.checkout-email': ApiCheckoutEmailCheckoutEmail;
       'api::checkout.checkout': ApiCheckoutCheckout;
       'api::conatct-floating-label.conatct-floating-label': ApiConatctFloatingLabelConatctFloatingLabel;
       'api::contact-card.contact-card': ApiContactCardContactCard;
       'api::contactform.contactform': ApiContactformContactform;
       'api::copy-right-url.copy-right-url': ApiCopyRightUrlCopyRightUrl;
+      'api::email.email': ApiEmailEmail;
       'api::event-picture.event-picture': ApiEventPictureEventPicture;
       'api::event-video.event-video': ApiEventVideoEventVideo;
       'api::featured-event.featured-event': ApiFeaturedEventFeaturedEvent;
       'api::floating-category.floating-category': ApiFloatingCategoryFloatingCategory;
       'api::footer-content.footer-content': ApiFooterContentFooterContent;
       'api::global.global': ApiGlobalGlobal;
+      'api::hire-video.hire-video': ApiHireVideoHireVideo;
+      'api::landing-hero.landing-hero': ApiLandingHeroLandingHero;
       'api::logo.logo': ApiLogoLogo;
       'api::order-reference-card.order-reference-card': ApiOrderReferenceCardOrderReferenceCard;
       'api::order-success-assistance-card.order-success-assistance-card': ApiOrderSuccessAssistanceCardOrderSuccessAssistanceCard;

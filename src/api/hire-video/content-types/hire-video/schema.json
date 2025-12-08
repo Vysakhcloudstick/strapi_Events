@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "hire_videos",
+  "info": {
+    "singularName": "hire-video",
+    "pluralName": "hire-videos",
+    "displayName": "hireHeroSection"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heroImg": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "text"
+    }
+  }
+}

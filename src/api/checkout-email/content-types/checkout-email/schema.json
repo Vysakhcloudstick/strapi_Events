@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "checkout_emails",
+  "info": {
+    "singularName": "checkout-email",
+    "pluralName": "checkout-emails",
+    "displayName": "Checkout Email"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "name": { "type": "string" },
+    "email": { "type": "string" },
+    "message": { "type": "text" },
+    "preferredDate": { "type": "date" },
+    "preferredTime": { "type": "string" }
+  }
+}

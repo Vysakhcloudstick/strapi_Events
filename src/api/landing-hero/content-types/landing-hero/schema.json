@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "landing_heroes",
+  "info": {
+    "singularName": "landing-hero",
+    "pluralName": "landing-heroes",
+    "displayName": "landingHero"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "herovideo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "button1": {
+      "type": "string"
+    },
+    "button2": {
+      "type": "string"
+    }
+  }
+}

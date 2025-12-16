@@ -56,7 +56,7 @@ export default factories.createCoreController(
         companyAddress,
       };
 
-      const adminEmail = "jarun@cloudstick.io";
+      const adminEmail = "anoopvsmadhav@gmail.com";
 
       try {
         // 1️⃣ Send email to admin

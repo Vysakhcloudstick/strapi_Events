@@ -14,7 +14,7 @@ export default factories.createCoreController("api::email.email", ({ strapi }) =
       return ctx.badRequest(`Missing required fields: ${missing.join(", ")}`);
     }
 
-    const adminEmail = "tharammelvysakh@gmail.com"; 
+    const adminEmail = "anoopvsmadhav@gmail.com"; 
     try {
       await strapi.service("api::email.email").sendEmail({
         to: adminEmail,

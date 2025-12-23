@@ -29,6 +29,7 @@ export default factories.createCoreController("api::email.email", ({ strapi }) =
         data,
         template: autoReplyTemplate,
       });
+      
 
       return ctx.send({ message: "Emails sent successfully" });
     } catch (err) {

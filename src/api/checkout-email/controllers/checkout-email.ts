@@ -70,7 +70,7 @@ export default factories.createCoreController(
         // 2️⃣ Send auto-reply email to client
         await strapi.service("api::checkout-email.checkout-email").sendEmail({
           to: email,
-          subject: "Thank you! We've received your checkout request",
+          subject: "Thank you! We've received your  checkout request",
           data: formData,
           template: clientTemplate,
         });
